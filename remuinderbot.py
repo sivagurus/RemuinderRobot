@@ -17,28 +17,22 @@ logger = logging.getLogger(__name__)
 
 def about(bot, update):
     keyboard = [[InlineKeyboardButton("GitHub", callback_data='git'),
-                 InlineKeyboardButton("Twitter", callback_data='twitter'),
-                 InlineKeyboardButton("Youtube", callback_data='youtube')]]
+                 InlineKeyboardButton("Twitter", callback_data='twitter')
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    update.message.reply_text('📌 Developed by @J4NN0.\n', reply_markup=reply_markup)
+    update.message.reply_text('📌 Developed by @AnimeKaizokuEncodes.\n', reply_markup=reply_markup)
 
 def call_back(bot, update):
     query = update.callback_query
 
     if format(query.data) == 'git':
-        bot.edit_message_text(text="https://github.com/J4NN0",
+        bot.edit_message_text(text="https://github.com/AnimeKaizoku",
                               chat_id=query.message.chat_id,
                               message_id=query.message.message_id)
 
     if format(query.data) == 'twitter':
-        bot.edit_message_text(text="https://twitter.com/giannofederico",
-                              chat_id=query.message.chat_id,
-                              message_id=query.message.message_id)
-
-    if format(query.data) == 'youtube':
-        bot.edit_message_text(text="https://www.youtube.com/channel/UC_lI0Z3CnnWLKCZkOR8Z1oQ",
+        bot.edit_message_text(text="https://twitter.com/KaizokuEncodes",
                               chat_id=query.message.chat_id,
                               message_id=query.message.message_id)
 
