@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 def about(bot, update):
     keyboard = [[InlineKeyboardButton("GitHub", callback_data='git'),
-                 InlineKeyboardButton("Twitter", callback_data='twitter')
+                 InlineKeyboardButton("Twitter", callback_data='twitter')]]
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
