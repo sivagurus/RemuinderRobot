@@ -403,7 +403,7 @@ def error(bot, update, error):
 
 def main():
     # Create the Updater
-    updater = Updater("TOKEN")
+    updater = Updater(os.environ['TOKEN'])
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
