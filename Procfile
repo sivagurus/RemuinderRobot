@@ -1,1 +1,1 @@
-worker: python j4nn0b0t.py
+worker: python remuinderbot.py
